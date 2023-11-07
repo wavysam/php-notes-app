@@ -49,7 +49,7 @@ $notes = $stmt->fetchAll(PDO::FETCH_OBJ);
                                 <a href="<?= "update.php?id=".$note->id ?>" class="flex items-center justify-center bg-emerald-600 text-slate-200 text-sm h-6 w-6 rounded shadow-md mr-1">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                                <a href="" class="flex items-center justify-center bg-rose-500 text-slate-200 text-sm h-6 w-6 rounded shadow-md">
+                                <a href="<?= "delete.php?id=".$note->id ?>" class="flex items-center justify-center bg-rose-500 text-slate-200 text-sm h-6 w-6 rounded shadow-md" onclick="return confirm('Are you sure you want to delete?')">
                                     <i class="bi bi-trash"></i>
                                 </a>
                             </div>
