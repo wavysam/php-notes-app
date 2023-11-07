@@ -3,6 +3,12 @@
 session_start();
 require_once "dbconfig.php";
 
+if (!isset( $_SESSION["id"]) || !isset($_SESSION["username"]))
+{
+    header("Location: login.php");
+    exit();
+}
+
 $id = $_GET["id"];
 $errors = [];
 
